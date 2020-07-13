@@ -19,8 +19,8 @@ DATABASES = {
 3. Run these commands to run the app:
 ```
 pip install -r requirements.txt
-python manage.py migrate
 python manage.py makemigrations accounts
+python manage.py migrate
 python manage.py runserver 0:8080
 ```
 
