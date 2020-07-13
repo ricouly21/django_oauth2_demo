@@ -83,17 +83,19 @@ class UserViewSet(ViewSet):
         first_name = data.get('first_name')
         last_name = data.get('last_name')
 
-        # Create User
-        user, is_created = User.objects.get_or_create(username=username, email=email)
+        # Check if User is existing
+        user = User.objects.filter(username=username, email=email).first()
 
         # If User is already existing.
-        if not is_created:
+        if user:
             return Response({
                 'status': HTTP_400_BAD_REQUEST,
                 'message': 'ERROR: User already exists.',
             }, status=HTTP_400_BAD_REQUEST)
 
         else:
+            user = User(username=username, email=email)
+
             # Validate and set User password
             try:
                 validate_password(password, user)
