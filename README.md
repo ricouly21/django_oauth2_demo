@@ -21,7 +21,7 @@ DATABASES = {
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py makemigrations accounts
-python manage.py runserver
+python manage.py runserver 0:8080
 ```
 
 ## Contributors
