@@ -1,3 +1,4 @@
+import requests
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
@@ -10,12 +11,21 @@ from accounts.models import Account
 from accounts.serializers import AccountSerializer, UserSerializer
 
 
-class AccountViewSet(ModelViewSet):
-    queryset = Account.objects.all()
+class AccountViewSet(ViewSet):
     serializer_class = AccountSerializer
 
-    @staticmethod
-    def create(request, *args, **kwargs):
+    @action(methods=['POST'], detail=False)
+    def get_account_from_user_id(self, request):
+        data = request.data
+        user_id = data.get('user_id')
+
+        account = Account.objects.filter(user_id=user_id).first()
+        serializer = AccountViewSet.serializer_class(account)
+
+        return Response(serializer.data)
+
+    @action(methods=['POST'], detail=False)
+    def create_account(self, request):
         data = request.data
         user_id = data.get('user_id')
         dob = data.get('dob')
