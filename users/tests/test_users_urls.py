@@ -8,7 +8,7 @@ from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_404_NO
 from rest_framework.test import APITestCase, APIRequestFactory
 
 
-class TestGetUserUrls(APITestCase):
+class TestUserUrls(APITestCase):
     """
     Test case for checking if the specified API URL is working properly.
 

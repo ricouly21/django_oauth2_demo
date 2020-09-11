@@ -3,7 +3,7 @@ from rest_framework.status import HTTP_200_OK
 from rest_framework.test import APITestCase
 
 
-class TestAPIStatusCheckUrls(APITestCase):
+class TestAPIBaseUrls(APITestCase):
     """
     Test case for checking if the specified API URL is working properly.
 
