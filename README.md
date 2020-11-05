@@ -7,10 +7,10 @@ This is a simple backend application with basic Django models and OAuth2 integra
 2. Rename ```django_demo/.env.copy``` into ```django_demo/.env``` and replace these values.
 ```
 # PostgreSQL Database
-DB_NAME=<db_name>
-DB_USER=<db_user>
-DB_HOST=<db_host>
-DB_PORT=<db_port>
+DB_NAME = <Name of Database>
+DB_USER = <Name of Database Owner>
+DB_HOST = <Database host address (default: 127.0.0.1)>
+DB_PORT= <Database port (default: 5432)>
 ```
 3. Run these commands to run the app:
 ```
