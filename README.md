@@ -1,6 +1,6 @@
 # Django OAuth2 Demo
 
-This is a simple backend application with basic Django models and OAuth2 integration using ```django-oauth-toolkit```. This project uses PostgreSQL for the database.
+This is a simple backend application with basic Django models and OAuth2.0 integration using ```django-oauth-toolkit```. This project uses PostgreSQL for the database.
 
 ## Installation
 1. Create a PostgreSQL database.
