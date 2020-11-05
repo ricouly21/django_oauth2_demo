@@ -40,6 +40,8 @@ urlpatterns = [
 
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
+    path('openid/', include('oidc_provider.urls', namespace='oidc_provider')),
+
     path('admin/', admin.site.urls),
 ]
 

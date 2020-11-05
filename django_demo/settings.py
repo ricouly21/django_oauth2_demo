@@ -33,19 +33,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts',
-    'users',
-
-    'oauth2_provider',
-    'rest_framework',
-    'corsheaders',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'oauth2_provider',
+    'oidc_provider',
+    'rest_framework',
+    'corsheaders',
+
+    'accounts',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +152,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 OAUTH2_PROVIDER = {
     'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore'
 }
+
+LOGIN_URL = '/admin/login/'
+
