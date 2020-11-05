@@ -12,7 +12,7 @@ DB_USER = <Name of Database Owner>
 DB_HOST = <Database host address (default: 127.0.0.1)>
 DB_PORT= <Database port (default: 5432)>
 ```
-3. Run these commands to run the app:
+3. Enter these commands on your terminal to run the app:
 ```
 pip install -r requirements.txt
 python manage.py makemigrations accounts
